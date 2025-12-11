@@ -3,6 +3,15 @@ import pandas as pd
 import plotly.graph_objects as go
 from datetime import datetime
 from collections import defaultdict
+# 隐藏Streamlit页面上的GitHub链接
+hide_github_link = """
+<style>
+.css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob, .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137, .viewerBadge_text__1JaDK {
+    display: none !important;
+}
+</style>
+"""
+st.markdown(hide_github_link, unsafe_allow_html=True)
 
 # ======================
 # 1. 读取并清洗数据
@@ -309,4 +318,5 @@ else:
     
     
     
+
     #python -m streamlit run select_data.py
